@@ -4,8 +4,8 @@
 Vinyamin Lobchinskiy  
 Winter 2025
 
-# Simulated login system
-A simple program that 
+# Space missions data analysis
+A simple program that analyzes data from a list of space missions, and outputs to the console.
 
 ### Key Concepts  
 for loops  
