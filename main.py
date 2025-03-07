@@ -1,9 +1,55 @@
-from myFunctions import *
+#from myFunctions import *
 from colorama import Fore, Style
 import os
 os.system('clear')
 
 
+### from myFunctions.py ###
+
+# Counts the total number of space missions.
+def count_num_missions(missions_list):
+    num = 0
+    for i in missions_list:
+        num += 1
+    return num
+
+
+
+# Counts the number of successful missions.
+def count_num_success(missions_list):
+    num = 0
+    for i in missions_list:
+        if i == True:
+            num +=1
+    return num
+
+
+# Calculates the success rate of the missions.
+def calc_success_rate(missions, successes):
+    rate = (successes / missions) * 100
+    rate = round(rate, 2)
+    return rate
+
+
+
+
+# Identifys list of missions launched before year 2000.
+def identify_pre2000(years, names):
+    pre2000_names = []
+    for year, name in zip(years, names):    # To go through both list together
+        if year < 2000:
+            pre2000_names.append(name)
+
+    return pre2000_names
+
+
+
+
+def print_bulletList(list):
+    for name in list:
+        print(f"- {name}")
+
+### end myFunctions.py ###
 
 mission_names = ['Apollo 11', 'Challenger', 'Curiosity Rover', 'Viking 1', 'Mars Pathfinder', 'Hubble Telescope', 'Apollo 13']
 mission_years = [1969, 1986, 2012, 1975, 1996, 1990, 1970]
